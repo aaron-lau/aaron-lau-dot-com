@@ -1,0 +1,180 @@
+@import '../styles/colors';
+@import '../styles/animation';
+@import url('https://fonts.googleapis.com/css?family=Overpass:300,400,600,700&display=swap');
+
+::selection {
+  color: white;
+  background: $primary;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  font-size: 18px;
+}
+
+body {
+  font-family: Overpass, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Overpass, sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+a {
+  text-decoration: none;
+}
+
+strong {
+  font-weight: 600;
+}
+
+*:focus,
+a:active {
+  outline: 1px solid $primary;
+}
+
+.hidden {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-25 {
+  width: 25%;
+}
+// button styles
+.btn {
+  text-align: center;
+  padding: 12px 20px;
+  border: 2px solid;
+  text-decoration: none;
+  background: transparent;
+  transition: all 0.1s linear;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn--full {
+  font-weight: bold;
+  width: 100%;
+}
+
+// light mode
+body.light-mode {
+  background-color: $white;
+  color: $darkest-grey;
+  transition: background-color 200ms cubic-bezier(0.39, 0.575, 0.565, 1);
+
+  a {
+    color: $primary;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  strong {
+    color: $grey-900;
+  }
+
+  p,
+  li,
+  td,
+  th,
+  figure {
+    color: $grey-800;
+  }
+
+  .btn {
+    color: $darker-grey;
+    border-color: $darker-grey;
+  }
+
+  .btn--hover:hover,
+  .btn--hover:focus {
+    outline: none;
+    color: $grey-100;
+    border-color: $primary;
+    background: $primary;
+    transition: all 0.3s ease;
+  }
+}
+
+// dark theme
+body.dark-mode {
+  background-color: $darkest-grey;
+  color: $white;
+  transition: background-color 200ms cubic-bezier(0.39, 0.575, 0.565, 1);
+
+  a {
+    color: $primary-lighter;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  strong {
+    color: $grey-200;
+  }
+
+  hr {
+    background: $grey-700;
+  }
+
+  p,
+  li,
+  td,
+  th {
+    color: $grey-400;
+  }
+
+  .btn {
+    color: $light-grey;
+    border-color: $grey-700;
+  }
+
+  .btn--hover:hover,
+  .btn--hover:focus {
+    outline: none;
+    color: $darkest-grey;
+    background: $primary-lighter;
+    border-color: $primary-lighter;
+    transition: all 0.1s linear;
+  }
+}
+
+// media query
+@media screen and (max-width: 550px) {
+  html {
+    font-size: 18px;
+  }
+}

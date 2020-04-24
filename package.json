@@ -1,0 +1,58 @@
+{
+  "name": "aaron-lau.com",
+  "private": true,
+  "description": "Personal Website of Aaron Lau",
+  "version": "0.1.0",
+  "author": "Aaron Lau <aaron-lau@aaron-lau.com>",
+  "dependencies": {
+    "@mdx-js/mdx": "^1.5.9",
+    "@mdx-js/react": "^1.5.9",
+    "gatsby": "^2.20.29",
+    "gatsby-image": "^2.3.4",
+    "gatsby-plugin-feed-mdx": "^1.0.1",
+    "gatsby-plugin-google-analytics": "^2.2.4",
+    "gatsby-plugin-manifest": "^2.3.6",
+    "gatsby-plugin-mdx": "^1.1.10",
+    "gatsby-plugin-netlify": "^2.2.3",
+    "gatsby-plugin-nprogress": "^2.2.3",
+    "gatsby-plugin-offline": "^3.1.4",
+    "gatsby-plugin-react-helmet": "^3.2.4",
+    "gatsby-plugin-sass": "^2.2.3",
+    "gatsby-plugin-sharp": "^2.5.6",
+    "gatsby-plugin-sitemap": "^2.3.5",
+    "gatsby-remark-autolink-headers": "^2.2.3",
+    "gatsby-remark-copy-linked-files": "^2.2.3",
+    "gatsby-remark-images": "^3.2.5",
+    "gatsby-remark-prismjs": "^3.4.4",
+    "gatsby-source-filesystem": "^2.2.4",
+    "gatsby-transformer-json": "^2.3.3",
+    "gatsby-transformer-sharp": "^2.4.6",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.14.0",
+    "prismjs": "^1.20.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^5.2.1",
+    "use-dark-mode": "^2.3.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  },
+  "keywords": [
+    "gatsby",
+    "blog"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "develop": "gatsby develop -H 0.0.0.0 -p 8000",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve -H 0.0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aaron-lau/aaron-lau-dot-com"
+  }
+}

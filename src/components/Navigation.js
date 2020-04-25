@@ -6,6 +6,8 @@ import './navigation.scss'
 
 function Navigation() {
   const [isSidebarOpen, toggleSidebar] = useState(false)
+  const resume_drive_url = "https://drive.google.com/drive/folders/1T8wl807aKjwm2uu_cuTfbIMnEOEsNawy?usp=sharing"
+
   useEffect(() => {
     const navbar = document.getElementById('nav-mobile')
     const checkbox = document.getElementById('checkbox1')
@@ -29,6 +31,7 @@ function Navigation() {
         <Link className="nav__item" activeClassName="nav__item--active" to="/blog/">
           Blog
         </Link>
+        <a className="nav__item" href={resume_drive_url} download>Resume</a>
         <Link className="nav__item" activeClassName="nav__item--active" to="/contact/">
           Contact
         </Link>
@@ -57,6 +60,7 @@ function Navigation() {
         <Link className="nav__item" activeClassName="nav__item--active" to="/blog/">
           Blog
         </Link>
+        <a className="nav__item" href={resume_drive_url} download>Resume</a>
         <Link className="nav__item" activeClassName="nav__item--active" to="/contact/">
           Contact
         </Link>

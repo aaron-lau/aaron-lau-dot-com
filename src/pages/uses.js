@@ -12,15 +12,15 @@ function index() {
 
       <main className="uses">
         <section className="uses-section">
-          <h2>Language</h2>
+          <h2>Programming Language</h2>
           <li>
             <span className="uses-subheader">Python -</span> Who doesn't like 🐍
           </li>
           <li>
-            <span className="uses-subheader">Scala/Spark -</span>
+            <span className="uses-subheader">Scala/Spark</span>
           </li>
           <li>
-            <span className="uses-subheader">SQL -</span> UPDATE user_table SET salary = 1000000 WHERE name = 'Aaron Lau';
+            <span className="uses-subheader">SQL</span>
           </li>
           <li>
             <span className="uses-subheader">Go -</span> In the process of learning
@@ -30,30 +30,39 @@ function index() {
         <section className="uses-section">
           <h2>Tools</h2>
           <li>
-            <span className="uses-subheader">AWS and GCP -</span> Multi Cloud
+            <span className="uses-subheader">AWS and GCP</span>
           </li>
           <li>
-            <span className="uses-subheader">Docker -</span>
+            <span className="uses-subheader">Docker and Kubernetes</span>
           </li>
           <li>
-            <span className="uses-subheader">Zeppelin and Jupyter -</span> Notebooks!
+            <span className="uses-subheader">Zeppelin and Jupyter</span> Notebooks
+          </li>
+          <li>
+            <span className="uses-subheader">Looker</span>
           </li>
         </section>
 
         <section className="uses-section">
-          <h2>Web Development</h2>
+          <h2>Deployment</h2>
+          <li>
+            <span className="uses-subheader">Gitlab CI/CD</span>
+          </li>
+          <li>
+            <span className="uses-subheader">Jenkins</span>
+          </li>
+          <li>
+            <span className="uses-subheader">Spinnaker</span>
+          </li>
+        </section>
+
+        <section className="uses-section">
+          <h2>Web Dev</h2>
           <li>
             <span className="uses-subheader">React and Redux -</span> Just like this website
           </li>
           <li>
-            <span className="uses-subheader">Netlify</span> 
-          </li>
-        </section>
-
-        <section className="uses-section">
-          <h2>Tools</h2>
-          <li>
-            <span className="uses-subheader">VSCode -</span> The best editor out there
+            <span className="uses-subheader">Netlify</span>
           </li>
         </section>
       </main>

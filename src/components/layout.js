@@ -20,18 +20,16 @@ const Layout = ({ children }) => (
           __html: `{
           "@context": "https://schema.org",
           "@type": "Person",
-          "name": "Jibin Thomas",
-          "email": "jibin.thomas2706@gmail.com",
-          "image": "https://drive.google.com/uc?id=1DWBWax_DJCH-oetqBRxYzWGul2ZDcTak",
-          "url": "http://jibin.tech",
-          "jobTitle": "Front End Developer",
+          "name": "Aaron Lau",
+          "email": "aaron-lau@aaron-lau.com",
+          "image": "https://drive.google.com/",
+          "url": "http://aaron-lau.com",
+          "jobTitle": "Data Engineer",
           "gender": "http://schema.org/Male",
           "sameAs": [
-            "https://github.com/jibin2706",
+            "https://github.com/aaron-lau",
             "https://www.linkedin.com/in/jibin2706/",
-            "http://instagram.com/jibin2706",
             "https://twitter.com/real_jibin",
-            "https://blog.jibin.tech/rss.xml"
           ]
         }`,
         }}

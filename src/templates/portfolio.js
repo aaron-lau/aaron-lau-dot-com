@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Projects from '../components/portfolio/Projects'
+import Skills from '../components/portfolio/Skills'
 import FeaturedPosts from '../components/portfolio/FeaturedPosts'
 
 import './portfolio.scss'
@@ -36,6 +37,7 @@ function portfolio() {
       </section>
 
       <Projects />
+      <Skills />
       {/* <FeaturedPosts /> */}
     </main>
   )

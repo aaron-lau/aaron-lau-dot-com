@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import './socialShare.scss'
 
 function SocialShare({ slug, title, body, hashtags, showHeader }) {
-  const url = `https://jibin.tech${slug}`
+  const url = `https://aaron-lau.com${slug}`
   return (
     <section className="share-post">
       {showHeader && (

@@ -8,8 +8,8 @@ import Layout from '../components/layout'
 const Contact = () => (
   <Layout>
     <SEO
-      title="Contact Jibin Thomas - Front-End Web Developer"
-      description="He is available for freelancing contract work. You can reach out to him at jibin.thomas2706@gmail.com"
+      title="Contact Aaron Lau"
+      description="aaron-lau@aaron-lau.com"
     />
 
     <main className="contact">

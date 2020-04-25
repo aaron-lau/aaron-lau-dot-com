@@ -1,0 +1,30 @@
+[
+  {
+    "company": "Datadog",
+    "company_link": "https://www.datadoghq.com",
+    "position": "Data Engineer",
+    "timeline": "July 2019 - Present",
+    "description": "string"
+  },
+  {
+    "company": "Datadog",
+    "company_link": "https://www.datadoghq.com",
+    "position": "Data Engineer Coop",
+    "timeline": "May 2018 - December 2018",
+    "description": "string"
+  },
+  {
+    "company": "BazaarVoice",
+    "company_link": "https://www.bazaarvoice.com/",
+    "position": "Full Stack Developer Coop",
+    "timeline": "May 2017 - August 2017",
+    "description": "string"
+  },
+  {
+    "company": "Imagine Communications",
+    "company_link": "https://www.imaginecommunications.com/",
+    "position": "Test Automation Engineer Coop",
+    "timeline": "August 2016 - December 2016",
+    "description": "string"
+  }
+]

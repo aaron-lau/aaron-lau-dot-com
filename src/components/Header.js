@@ -30,8 +30,8 @@ function Header() {
           <img
             className="brand-logo"
             src={Logo}
-            alt="Jibin Thomas"
-            title="Jibin Thomas"
+            alt="Aaron Lau"
+            title="Aaron Lau"
           />
         </Link>
         <Navigation />

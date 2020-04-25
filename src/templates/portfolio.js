@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Experiences from '../components/portfolio/Experiences'
 import Projects from '../components/portfolio/Projects'
 import Skills from '../components/portfolio/Skills'
 import FeaturedPosts from '../components/portfolio/FeaturedPosts'
@@ -35,7 +36,7 @@ function portfolio() {
           </a>
         </section>
       </section>
-
+      <Experiences />
       <Projects />
       <Skills />
       {/* <FeaturedPosts /> */}

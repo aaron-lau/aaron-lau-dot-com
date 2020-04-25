@@ -10,13 +10,14 @@
 }
 ```
 
-### Work
+### Experience
 
 ```json
 {
   "company": "string",
+  "company_link": "html string",
   "position": "string",
   "timeline": "string (July 2019 - Present)",
-  "description": "html string"
+  "description": "string"
 }
 ```

@@ -28,8 +28,8 @@ const Layout = ({ children }) => (
           "gender": "http://schema.org/Male",
           "sameAs": [
             "https://github.com/aaron-lau",
-            "https://www.linkedin.com/in/jibin2706/",
-            "https://twitter.com/real_jibin",
+            "https://www.linkedin.com/in/aaronlaucs/",
+            "https://twitter.com/aaron_lau",
           ]
         }`,
         }}

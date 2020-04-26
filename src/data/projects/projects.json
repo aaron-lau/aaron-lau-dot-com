@@ -15,7 +15,8 @@
   {
     "title": "Popular Twitch Streams UI",
     "stack": "React",
-    "source_link": "https://github.com/bazaarvoice/bv-vger",
+    "source_link": "https://github.com/aaron-lau/react-twitch-viewer",
+    "project_link": "https://aaron-lau.github.io/react-twitch-viewer/",
     "description": "Fun React web app used to see the Twitch streams with the most active viewers"
   }
 ]

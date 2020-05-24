@@ -25,14 +25,14 @@ function Navigation() {
   return (
     <>
       <nav id="nav-desktop" className="nav">
-        <Link className="nav__item" activeClassName="nav__item--active" to="/">
+        <Link className="nav__item" to="/">
           Home
         </Link>
-        <Link className="nav__item" activeClassName="nav__item--active" to="/blog/">
+        <Link className="nav__item" to="/blog/">
           Blog
         </Link>
         <a className="nav__item" href={resume_drive_url} download>Resume</a>
-        <Link className="nav__item" activeClassName="nav__item--active" to="/contact/">
+        <Link className="nav__item" to="/contact/">
           Contact
         </Link>
         <ToggleThemeButton />
@@ -54,14 +54,14 @@ function Navigation() {
       </label>
 
       <nav id="nav-mobile">
-        <Link className="nav__item" activeClassName="nav__item--active" to="/">
+        <Link className="nav__item" to="/">
           Home
         </Link>
-        <Link className="nav__item" activeClassName="nav__item--active" to="/blog/">
+        <Link className="nav__item" to="/blog/">
           Blog
         </Link>
         <a className="nav__item" href={resume_drive_url} download>Resume</a>
-        <Link className="nav__item" activeClassName="nav__item--active" to="/contact/">
+        <Link className="nav__item" to="/contact/">
           Contact
         </Link>
         <ToggleThemeButton />

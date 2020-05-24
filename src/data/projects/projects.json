@@ -1,20 +1,20 @@
 [
   {
     "title": "ReFresh Clothing",
-    "stack": "React/Redux",
+    "stack": ["React", "Redux"],
     "source_link": "https://github.com/aaron-lau/re-fresh-clothing",
     "project_link": "https://re-fresh-clothing.herokuapp.com/",
     "description": "Fully implemented React E-commerce app built with Redux, Hooks, GraphQL, ContextAPI, Stripe, and Firebase."
   },
   {
     "title": "VGER",
-    "stack": "AWS Lambda and Angular",
+    "stack": ["AWS Lambda", "Angular"],
     "source_link": "https://github.com/bazaarvoice/bv-vger",
     "description": "Early contributor to serverless web app designed to give engineering teams insight into their agile performance by scraping data from Github and JIRA."
   },
   {
     "title": "Popular Twitch Streams UI",
-    "stack": "React",
+    "stack": ["React"],
     "source_link": "https://github.com/aaron-lau/react-twitch-viewer",
     "project_link": "https://aaron-lau.github.io/react-twitch-viewer/",
     "description": "Fun React web app used to see the Twitch streams with the most active viewers"

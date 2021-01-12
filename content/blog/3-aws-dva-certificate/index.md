@@ -12,7 +12,7 @@ While the COVID-19 world pandemic is currently taking place, I thought I would s
 
 You might ask why? I think they are a fantastic way to  demonstrate expertise to employers and will absolutely help you with one's career goals. They’re also a great way to stay relevant even if you stay with the same employer.
 
-There are many AWS certifications one could obtain but considering this was my first, I thought I would start off with a [Developer Associate Certification](https://aws.amazon.com/certification/certified-developer-associate/). This is apart of the Associate tier and expects basic knowledge of AWS  environment and tools. This post will briefly go over how I prepared for the certification exam and what you can expect.
+There are many AWS certifications one could obtain but considering this was my first, I thought I would start off with a [Developer Associate Certification](https://aws.amazon.com/certification/certified-developer-associate/). This is apart of the Associate tier and expects basic knowledge of AWS environment and tools. This post will briefly go over how I prepared for the certification exam and what you can expect.
 
 ![AWS Tier List](aws-tier-list.jpg)
 ## Preparation

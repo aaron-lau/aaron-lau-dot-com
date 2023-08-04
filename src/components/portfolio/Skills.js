@@ -20,8 +20,13 @@ function Skills() {
         <img className="skills__img" src={react} alt="React" title="React" />
       </div>
       <div className="g-3">
-      <img className="skills__img" src={spark} alt="Spark" title="Spark" />
-      <img className="skills__img" src={aws} alt="AWS" title="AWS" />
+        <img className="skills__img" src={spark} alt="Spark" title="Spark" />
+        <img className="skills__img" src={aws} alt="AWS" title="AWS" />
+        <img className="skills__img" src={looker} alt="Looker" title="Looker" />
+      </div>
+      <div className="g-3">
+        <img className="skills__img" src={spark} alt="Spark" title="Spark" />
+        <img className="skills__img" src={aws} alt="AWS" title="AWS" />
         <img className="skills__img" src={looker} alt="Looker" title="Looker" />
       </div>
     </section>

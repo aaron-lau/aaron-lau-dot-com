@@ -24,7 +24,7 @@ const Layout = ({ children }) => (
           "email": "aaron-lau@aaron-lau.com",
           "image": "https://drive.google.com/",
           "url": "http://aaron-lau.com",
-          "jobTitle": "Data Engineer",
+          "jobTitle": "Software Engineer",
           "gender": "http://schema.org/Male",
           "sameAs": [
             "https://github.com/aaron-lau",

@@ -1,5 +1,5 @@
 ---
-title: 'Aaron's New York City Recommendations!'
+title: "Aaron's New York City Recommendations!"
 date: 2023-08-14
 info: 'My personal recommendations for New York City. ~10 minute read'
 tags: ['nyc', 'blog']

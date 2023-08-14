@@ -197,6 +197,10 @@ For Central Park, explore on foot, by Citi bike, or via electric scooter. For sc
 
 Between Manhattan and Queens is a small island called Roosevelt Island. There are some Cherry blossom trees there that you can see bloom in the spring time but other than that there's not much to do on the island itself. Getting to the island is the fine part. At 2nd Ave and 59th St there is an entrance to the Roosevelt Island Tramway. It costs the same as a regular MTA ride and you'll be able to ride a tram over the water. Much cooler than the underground subway.
 
+## Brooklyn (Coming Soon)
+
+## Queens (Coming Soon)
+
 ## Conclusion
 
-Remember, this guide is designed to help you make the most of your visit to New York City, offering a curated selection of experiences in each neighborhood. Enjoy exploring the city's vibrant and diverse offerings!
+That is everything I have for now. I'll update this page with my Brooklyn and Queens recommendations soon. Don't hesitate to reach out if you have any questions. Enjoy exploring the city's vibrant and diverse offerings!

@@ -10,6 +10,17 @@ featured: true
 
 After spending over 4 years in New York City, I've compiled a comprehensive list of must-visit spots and activities. Whether you're a first-time visitor or a local looking for new experiences, this guide will help you navigate the city's diverse neighborhoods and boroughs. The list is organized by boroughs and neighborhoods, providing you with a convenient way to explore each area's unique attractions. Please note that the list is not ranked in order of preference unless otherwise specified, making it easier for you to plan your itinerary.
 
+## Intended Audience
+
+This blog post is intended for readers looking for recommendations beyond the typical main stream attractions such as the Empire State Building or Statue of Liberty. Although those are great sites you should visit, I try to recommend some more local spots.
+
+Particularly I will be giving recommendations for those who like to site see :camera:, to eat :pizza:, and to drink :cocktail:.
+
+## Prerequisites
+
+- Download the Resy app and make your reservations as soon as possible! You do not want to do a walk in only to find out that the wait time is 90 minutes.
+- Make sure you have plenty of data. Not only will you need data to navigate, but you'll want data to look up any subway service changes, opening hours of businesses, and nowadays to be able to scan QR codes for food menus.
+
 ## Financial District
 
 Let's start our journey in the world-renowned Financial District. Almost any subway will take you to this bustling area:

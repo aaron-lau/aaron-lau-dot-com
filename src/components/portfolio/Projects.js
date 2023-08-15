@@ -38,6 +38,7 @@ function Projects() {
                 </svg>
               </a>
             )}
+            {/*
             {project.node.project_link && (
               <a className="project-links-logo hero__social" href={project.node.project_link}>
                 <svg role="img" viewBox="0 0 24 24">
@@ -45,6 +46,7 @@ function Projects() {
                 </svg>
               </a>
             )}
+            */}
           </div>
         </div>
           {project.node.description && (

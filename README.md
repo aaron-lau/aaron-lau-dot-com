@@ -8,6 +8,7 @@ Source code for [www.aaron-lau.com](www.aaron-lau.com). Built using [Gatsby](htt
 
     ```shell
     cd aaron-lau-dot-com/
+    CXXFLAGS="--std=c++14" npm install
     npm start
     ```
 

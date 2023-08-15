@@ -7,7 +7,7 @@ import SEO from '../components/SEO'
 
 import './blogPostTemplate.scss'
 
-export default ({ data, pageContext }) => {
+const BlogPostTemplate = ({ data, pageContext }) => {
   // const GITHUB_USERNAME = 'aaron-lau'
   // const GITHUB_REPO_NAME = 'aaron-lau-dot-com'
   // const GITHUB_BRANCH = 'develop'
@@ -83,6 +83,7 @@ export default ({ data, pageContext }) => {
     </Layout>
   )
 }
+export default BlogPostTemplate;
 
 export const query = graphql`
   query($slug: String!) {

@@ -2,16 +2,16 @@
   {
     "company": "Datadog",
     "company_link": "https://www.datadoghq.com",
-    "position": "Data Engineer",
+    "position": "Software Engineer",
     "timeline": "July 2019 - Present",
-    "description": "string"
+    "description": "Working on the Data Science Team."
   },
   {
     "company": "Datadog",
     "company_link": "https://www.datadoghq.com",
     "position": "Data Engineer Coop",
     "timeline": "May 2018 - December 2018",
-    "description": "string"
+    "description": "Worked on the Internal Analytics Team."
   },
   {
     "company": "BazaarVoice",
@@ -25,6 +25,13 @@
     "company_link": "https://www.imaginecommunications.com/",
     "position": "Test Automation Engineer Coop",
     "timeline": "August 2016 - December 2016",
+    "description": "string"
+  },
+  {
+    "company": "BlackBerry",
+    "company_link": "https://www.blackberry.com/",
+    "position": "Software Developer Coop",
+    "timeline": "January 2016 - April 2016",
     "description": "string"
   }
 ]

@@ -27,7 +27,7 @@ function FeaturedPosts() {
   return (
     <section className="blog">
       <h2 className="portfolio__header">Featured Posts</h2>
-      <h3 className="portfolio__sub-header">I write about stuff that I learn</h3>
+      <h3 className="portfolio__sub-header">I write about stuff sometimes</h3>
       {data.allMdx.edges.map((post) => (
         <Link key={post.node.id} to={post.node.fields.slug} className="post">
           <h3 className="post__title">{post.node.frontmatter.title}</h3>

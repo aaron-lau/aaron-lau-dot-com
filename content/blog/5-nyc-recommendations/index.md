@@ -14,7 +14,7 @@ After spending over 4 years in New York City, I've compiled a comprehensive list
 
 This blog post is intended for readers looking for recommendations beyond the typical main stream attractions such as the Empire State Building or Statue of Liberty. Although those are great sites you should visit, I try to recommend some more local spots.
 
-Particularly I will be giving recommendations for those who like to site see :camera:, to eat :pizza:, and to drink :cocktail:.
+Particularly I will be giving recommendations for those who like to site see 📷, to eat 🍔, and to drink 🍸.
 
 ## Prerequisites
 

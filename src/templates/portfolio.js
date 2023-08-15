@@ -39,7 +39,7 @@ function portfolio() {
       <Experiences />
       <Projects />
       <Skills />
-      {/* <FeaturedPosts /> */}
+      {<FeaturedPosts />}
     </main>
   )
 }

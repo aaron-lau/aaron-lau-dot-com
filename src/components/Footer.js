@@ -27,7 +27,7 @@ function Footer() {
       </section>
 
       <section>
-        <p className="footer__copyright">&copy; 2023 Aaron Lau</p>
+        <p className="footer__copyright">&copy; {(new Date().getFullYear())} Aaron Lau </p>
         <p className="footer__end">
           This site is built with <a href="https://gatsbyjs.org/">Gatsby.js </a> and hosted on{' '}
           <a href="https://netlify.com/">Netlify</a>. The source code is available on{' '}

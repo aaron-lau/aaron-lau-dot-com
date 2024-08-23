@@ -13,7 +13,7 @@ function portfolio() {
       <section className="hero">
         <h1 className="hero__heading">Hi, I'm Aaron Lau</h1>
         <h2 className="hero__sub-heading">
-          I’m a <Link to="/uses/">software engineer</Link> working in New York City at <a href="https://datadoghq.com">Datadog</a>
+          I’m a <Link to="/uses/">software development engineer </Link> working in New York City at <a href="https://datadoghq.com">AWS</a>
         </h2>
         <section className="hero__social">
           <a href="https://github.com/aaron-lau">

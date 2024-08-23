@@ -1,10 +1,17 @@
 [
   {
+    "company": "Amazon Web Services (AWS)",
+    "company_link": "https://aws.amazon.com/",
+    "position": "Software Development Engineer",
+    "timeline": "June 2024 - Present",
+    "description": "."
+  },
+  {
     "company": "Datadog",
     "company_link": "https://www.datadoghq.com",
     "position": "Software Engineer",
-    "timeline": "July 2019 - Present",
-    "description": "Working on the Data Science Team."
+    "timeline": "July 2019 - May 2024",
+    "description": "Worked on the Data Science Team."
   },
   {
     "company": "Datadog",

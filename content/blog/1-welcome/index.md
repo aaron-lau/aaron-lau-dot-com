@@ -4,7 +4,7 @@ date: 2019-10-19
 info: 'Inaugural Blog Post. ~2 minute read'
 tags: ['random']
 image: 'salty_egg.jpg'
-featured: true
+featured: false
 ---
 
 Welcome to my blog site 🤗! I plan to use these blogs as a place for writing rants, thoughts, reviews, experiences, notes, and just about anything that comes to mind. Stay tuned!

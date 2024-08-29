@@ -187,7 +187,7 @@ No visit to K-town is complete without karaoke. Consider Karaoke WOW, 32 Karaoke
 
 While Midtown might not be the most picturesque area, it offers something for everyone.
 
-- Scattered across Midtown are theaters for broadway shows. If you don’t care about where you sit in the theatre, sign up for the broadway lotteries. Tickets are usually available two weeks before the show date. Check out <https://lottery.broadwaydirect.com/> and <https://www.luckyseat.com/home>.
+- Scattered across Midtown are theaters for broadway shows. If you don’t care about where you sit in the theatre, sign up for the broadway lotteries. Tickets are usually available two weeks before the show date. Check out https://lottery.broadwaydirect.com and https://www.luckyseat.com/home.
 - Enjoy Bryant Park, the largest park in Midtown aside from Central Park, featuring various events year-round.
 - Explore the impressive murals at the old New York Public Library and the new one, where you'll find clean public bathrooms.
 - Wander along 5th Ave to discover luxury stores, with St. Patrick's Cathedral and Rockefeller Center as highlights.

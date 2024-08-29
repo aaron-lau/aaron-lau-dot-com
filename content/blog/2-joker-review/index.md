@@ -3,7 +3,7 @@ title: 'The Joker - Review'
 date: 2019-10-20
 info: 'Review of The Joker (2019). ~5 minute read'
 tags: ['review', 'movie']
-featured: true
+featured: false
 ---
 
 ## Preconception

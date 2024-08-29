@@ -2,7 +2,7 @@
 title: 'Got AWS Developer Associate Certified!'
 date: 2020-05-19
 info: 'My Experience obtaining AWS-DVA. ~5 minute read'
-tags: ['random', 'aws']
+tags: ['tech', 'aws']
 featured: true
 ---
 

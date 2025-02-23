@@ -1,17 +1,18 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
+
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 
 import './blogPostTemplate.scss'
 
+// Define your custom components (if any)
 const components = {
-  // Add any custom components you use in MDX here
-  p: props => <p {...props} />,
   h1: props => <h1 {...props} />,
   h2: props => <h2 {...props} />,
-  // ... other components
+  p: props => <p {...props} />,
+  // Add other components as needed
 }
 
 const BlogPostTemplate = ({ data, pageContext, children }) => {
@@ -26,7 +27,7 @@ const BlogPostTemplate = ({ data, pageContext, children }) => {
   return (
     <Layout>
       <SEO title={title} description={info} type="article" imagePath={imageURL} slug={slug} />
-      
+
       <article className="blog">
         <header>
           <div className="blog__meta">
@@ -75,7 +76,6 @@ export default BlogPostTemplate
 export const query = graphql`
   query($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
-      body
       fields {
         slug
       }

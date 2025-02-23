@@ -1,19 +1,25 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { Helmet } from 'react-helmet'
-
+import { MDXProvider } from '@mdx-js/react'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 
 import './blogPostTemplate.scss'
 
-const BlogPostTemplate = ({ data, pageContext }) => {
+const components = {
+  // Add any custom components you use in MDX here
+  p: props => <p {...props} />,
+  h1: props => <h1 {...props} />,
+  h2: props => <h2 {...props} />,
+  // ... other components
+}
+
+const BlogPostTemplate = ({ data, pageContext, children }) => {
   const post = data.mdx
-  let { frontmatter } = post
-  let { slug } = post.fields
-  let { title, date, info, tags, image } = frontmatter
-  let { previous, next } = pageContext
+  const { frontmatter } = post
+  const { slug } = post.fields
+  const { title, date, info, tags, image } = frontmatter
+  const { previous, next } = pageContext
 
   const imageURL = (image && image.publicURL) || ''
 
@@ -21,23 +27,6 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     <Layout>
       <SEO title={title} description={info} type="article" imagePath={imageURL} slug={slug} />
       
-      <Helmet>
-        {/* Use template literals for the JSON-LD script */}
-        <script type="application/ld+json">{`
-          {
-            "@context": "http://schema.org",
-            "@type": "Article",
-            "headline": "${title.replace(/"/g, '\\"')}",
-            "datePublished": "${date}",
-            "author": {
-              "@type": "Person",
-              "name": "Aaron Lau"
-            },
-            "image": "${`https://blog.aaron-lau.com${imageURL}`}"
-          }
-        `}</script>
-      </Helmet>
-
       <article className="blog">
         <header>
           <div className="blog__meta">
@@ -55,7 +44,9 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         </header>
 
         <main className="blog-body" style={{ maxWidth: '800px', margin: 'auto' }}>
-          <MDXRenderer>{post.body}</MDXRenderer>
+          <MDXProvider components={components}>
+            {children}
+          </MDXProvider>
         </main>
       </article>
 

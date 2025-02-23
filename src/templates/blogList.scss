@@ -1,4 +1,4 @@
-@import '../styles/colors';
+@use '../styles/colors' as *;
 
 .blog-list {
   animation: translate-up 1s cubic-bezier(0.39, 0.575, 0.565, 1);

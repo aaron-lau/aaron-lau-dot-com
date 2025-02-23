@@ -1,4 +1,4 @@
-@import '../../styles/colors';
+@use '../../styles/colors' as *; 
 
 .project-container {
   margin-top: 3rem;

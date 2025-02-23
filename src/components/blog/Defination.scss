@@ -1,4 +1,4 @@
-@import '../../styles/colors';
+@use '../../styles/colors' as *;
 
 .defination {
   border-left: 4px solid $primary-light;

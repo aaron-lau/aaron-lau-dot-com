@@ -1,5 +1,5 @@
-@import '../styles/colors';
-@import '../styles/animation';
+@use '../styles/colors' as *;
+@use '../styles/animation' as *;
 @import url('https://fonts.googleapis.com/css?family=Overpass:300,400,600,700&display=swap');
 
 ::selection {

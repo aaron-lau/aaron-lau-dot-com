@@ -1,30 +1,34 @@
 import React, { useEffect } from 'react'
-import useDarkMode from 'use-dark-mode'
+import useDarkMode from '../hooks/useDarkMode'
 
 import './toggleButton.scss'
 
 function ToggleThemeButton() {
-  const darkMode = useDarkMode(false)
+  const { value, toggle } = useDarkMode(false)
+
   useEffect(() => {
-    const color = darkMode.value ? '#222222' : '#0b69a3'
-    document
-      .querySelector('meta[name="theme-color"]')
-      .setAttribute('content', color)
-  })
+    if (typeof document !== 'undefined') {
+      const color = value ? '#222222' : '#0b69a3'
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      if (metaThemeColor) {
+        metaThemeColor.setAttribute('content', color)
+      }
+    }
+  }, [value]) // Add value as dependency
 
   return (
     <button
       role="switch"
-      defaultChecked={darkMode.value}
-      onClick={darkMode.toggle}
+      defaultChecked={value}
+      onClick={toggle}
       aria-hidden="true"
-      aria-checked={darkMode.value}
+      aria-checked={value}
       className="toggle-button"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        fill={darkMode.value ? '#cbd5e0' : '#4a5568'}
+        fill={value ? '#cbd5e0' : '#4a5568'}
         width="20"
         style={{ display: 'block' }}
       >

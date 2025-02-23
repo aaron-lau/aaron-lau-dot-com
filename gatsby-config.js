@@ -104,6 +104,10 @@ module.exports = {
           // copying gif and other files
           'gatsby-remark-copy-linked-files',
         ],
+        mdxOptions: {
+          remarkPlugins: [],
+          rehypePlugins: [],
+        },
       },
     },
     {

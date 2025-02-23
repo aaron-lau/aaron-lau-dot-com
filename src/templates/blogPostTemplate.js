@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { Helmet } from 'react-helmet'
 
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
@@ -8,40 +9,34 @@ import SEO from '../components/SEO'
 import './blogPostTemplate.scss'
 
 const BlogPostTemplate = ({ data, pageContext }) => {
-  // const GITHUB_USERNAME = 'aaron-lau'
-  // const GITHUB_REPO_NAME = 'aaron-lau-dot-com'
-  // const GITHUB_BRANCH = 'develop'
-
   const post = data.mdx
   let { frontmatter } = post
   let { slug } = post.fields
   let { title, date, info, tags, image } = frontmatter
   let { previous, next } = pageContext
 
-  // const githubEditUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/${GITHUB_BRANCH}/src/pages${slug}index.md`
-
   const imageURL = (image && image.publicURL) || ''
 
   return (
     <Layout>
       <SEO title={title} description={info} type="article" imagePath={imageURL} slug={slug} />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: `{
+      
+      <Helmet>
+        {/* Use template literals for the JSON-LD script */}
+        <script type="application/ld+json">{`
+          {
             "@context": "http://schema.org",
             "@type": "Article",
-            "headline": "${title}",
+            "headline": "${title.replace(/"/g, '\\"')}",
             "datePublished": "${date}",
             "author": {
               "@type": "Person",
               "name": "Aaron Lau"
             },
-            "image": "${'https://blog.aaron-lau.com' + imageURL}"
-          }`,
-        }}
-      />
+            "image": "${`https://blog.aaron-lau.com${imageURL}`}"
+          }
+        `}</script>
+      </Helmet>
 
       <article className="blog">
         <header>
@@ -60,7 +55,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         </header>
 
         <main className="blog-body" style={{ maxWidth: '800px', margin: 'auto' }}>
-          <MDXRenderer className="blog-body">{post.body}</MDXRenderer>
+          <MDXRenderer>{post.body}</MDXRenderer>
         </main>
       </article>
 
@@ -83,7 +78,8 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     </Layout>
   )
 }
-export default BlogPostTemplate;
+
+export default BlogPostTemplate
 
 export const query = graphql`
   query($slug: String!) {

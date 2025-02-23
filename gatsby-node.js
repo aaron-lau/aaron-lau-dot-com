@@ -14,16 +14,22 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage, createRedirect } = actions
-  return graphql(`
+
+  // Get all MDX posts
+  const result = await graphql(`
     {
       allMdx(sort: {frontmatter: {date: DESC}}) {
         edges {
           node {
+            id
             frontmatter {
               title
               tags
+            }
+            internal {
+              contentFilePath
             }
             fields {
               slug
@@ -32,33 +38,33 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     }
-  `).then(result => {
-    const posts = result.data.allMdx.edges
+  `)
 
-    createBlogPages(posts, createPage)
-    createTagPages(posts, createPage)
-    createRedirectFile(createRedirect)
-  })
-}
+  if (result.errors) {
+    reporter.panicOnBuild('Error loading MDX result', result.errors)
+  }
 
-function createBlogPages(posts, createPage) {
+  const posts = result.data.allMdx.edges
+
+  // Create blog posts pages
   posts.forEach(({ node }, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
 
     createPage({
       path: node.fields.slug,
-      component: path.resolve(`./src/templates/blogPostTemplate.js`),
+      component: `${path.resolve(`./src/templates/blogPostTemplate.js`)}?__contentFilePath=${node.internal.contentFilePath}`,
       context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
+        id: node.id,
         slug: node.fields.slug,
         previous,
         next,
       },
     })
-    return posts
   })
+
+  createTagPages(posts, createPage)
+  createRedirectFile(createRedirect)
 }
 
 function createTagPages(posts, createPage) {

@@ -1,14 +1,15 @@
 import React from 'react'
 import Layout from '../components/layout'
 
-import SEO from '../components/SEO'
+
+import Seo from '../components/Seo'
 
 import '../styles/contact.scss'
 
 
 const Contact = () => (
   <Layout>
-    <SEO
+    <Seo
       title="Contact Aaron Lau"
       description="aaron-lau@aaron-lau.com"
     />

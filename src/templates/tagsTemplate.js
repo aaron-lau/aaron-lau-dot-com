@@ -4,14 +4,14 @@ import Layout from '../components/layout'
 
 import { graphql } from 'gatsby'
 import BlogList from './blogList'
-import SEO from '../components/SEO'
+import Seo from '../components/Seo'
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={`Filter blog posts by ${tag}`}
         description="Filtered blog post according to tags"
       />

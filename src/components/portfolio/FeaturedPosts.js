@@ -33,14 +33,18 @@ function FeaturedPosts() {
       <h3 className="portfolio__sub-header">I write about stuff sometimes</h3>
       {data.allMdx.edges.map((post) => (
         <Link key={post.node.id} to={post.node.fields.slug} className="post">
-          <h3 className="post__title">{post.node.frontmatter.title}</h3>
+          <h3 className="post__title">
+            <span className='animated-underline'>
+              {post.node.frontmatter.title}
+            </span>
+          </h3>
           <p className="post__description">{post.node.frontmatter.info}</p>
         </Link>
       ))}
-
+      <br></br>
       <p>
         Read more such
-        <Link to="/blog/"> post here</Link>
+        <Link className="animated-underline" to="/blog/"> post here</Link>
       </p>
     </section>
   )

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Header from './Header'
+import ParticleCursor from './ParticleCursor'
 import Footer from './Footer'
 
 const Layout = ({ children }) => {
@@ -11,12 +12,12 @@ const Layout = ({ children }) => {
     "email": "aaron-lau@aaron-lau.com",
     "image": "https://drive.google.com/",
     "url": "http://aaron-lau.com",
-    "jobTitle": "Data Engineer",
+    "jobTitle": "Sofrware Engineer",
     "gender": "http://schema.org/Male",
     "sameAs": [
       "https://github.com/aaron-lau",
       "https://www.linkedin.com/in/aaronlaucs/",
-      "https://twitter.com/aaron_lau"
+      "https://x.com/aaron_lau"
     ]
   }
 
@@ -27,6 +28,7 @@ const Layout = ({ children }) => {
           {JSON.stringify(schemaOrgJSONLD)}
         </script>
       </Helmet>
+      <ParticleCursor />
       <Header />
       <div
         style={{

@@ -1,12 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import SEO from '../components/SEO'
+
+import Seo from '../components/Seo'
 import Layout from '../components/layout'
 import BlogList from '../templates/blogList'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO
+    <Seo
       title="Blog Posts by Aaron Lau"
       description="Blog Posts by Aaron Lau"
     />

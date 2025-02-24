@@ -25,14 +25,14 @@ function Navigation() {
   return (
     <>
       <nav id="nav-desktop" className="nav">
-        <Link className="nav__item" to="/">
+        <Link className="nav__item animated-underline" to="/">
           Home
         </Link>
-        <Link className="nav__item" to="/blog/">
+        <Link className="nav__item animated-underline" to="/blog/">
           Blog
         </Link>
-        <a className="nav__item" href={resume_drive_url} download>Resume</a>
-        <Link className="nav__item" to="/contact/">
+        <a className="nav__item animated-underline" href={resume_drive_url} download>Resume</a>
+        <Link className="nav__item animated-underline" to="/contact/">
           Contact
         </Link>
         <ToggleThemeButton />

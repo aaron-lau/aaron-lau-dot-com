@@ -1,12 +1,13 @@
 import React from 'react'
-import SEO from '../components/SEO'
+
+import Seo from '../components/Seo'
 import Layout from '../components/layout'
 import Portfolio from '../templates/portfolio'
 
 function index() {
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Aaron Lau — Personal Website and Blogs"
         description="Aaron Lau's Peronsal Website and Blogs"
       />

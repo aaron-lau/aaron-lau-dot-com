@@ -29,7 +29,7 @@ function Experiences() {
         <div className="project-container" key={experience.node.company}>
           <h3 className="project-header">
             {experience.node.company_link && (
-              <a className="project-links" href={experience.node.company_link}>
+              <a className="project-links animated-underline" href={experience.node.company_link}>
                 {experience.node.company}
               </a>
             )}

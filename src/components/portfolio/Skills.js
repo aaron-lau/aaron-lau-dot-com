@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 
 import aws from '../../images/tech/aws.svg'
@@ -34,6 +35,7 @@ function Skills() {
         <img className="skills__img" src={gcp} alt="GCP" title="GCP" />
         <img className="skills__img" src={azure} alt="Azure" title="Azure" />
       </div>
+      <h3 className="portfolio__sub-header "><Link className="animated-underline" to="/uses/">Find more details here</Link></h3>
     </section>
   )
 }

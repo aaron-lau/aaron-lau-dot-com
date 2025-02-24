@@ -23,7 +23,7 @@ function ToggleThemeButton() {
       onClick={toggle}
       aria-hidden="true"
       aria-checked={value}
-      className="toggle-button"
+      className="toggle-button animated-underline"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

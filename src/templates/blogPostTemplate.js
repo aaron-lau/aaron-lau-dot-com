@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 
 import Layout from '../components/layout'
-import SEO from '../components/SEO'
+import Seo from '../components/Seo'
 
 import './blogPostTemplate.scss'
 
@@ -26,7 +26,7 @@ const BlogPostTemplate = ({ data, pageContext, children }) => {
 
   return (
     <Layout>
-      <SEO title={title} description={info} type="article" imagePath={imageURL} slug={slug} />
+      <Seo title={title} description={info} type="article" imagePath={imageURL} slug={slug} />
 
       <article className="blog">
         <header>

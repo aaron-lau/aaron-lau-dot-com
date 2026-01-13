@@ -1,4 +1,5 @@
 module.exports = {
+  adapter: require('gatsby-adapter-netlify').default(),
   siteMetadata: {
     title: `Aaron Lau`,
     siteUrl: `https://aaron-lau.com`,
@@ -15,7 +16,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-netlify`,
     `gatsby-transformer-json`,
     // sitemap generation
     {

@@ -4,7 +4,9 @@
 
 [build.environment]
   NODE_VERSION = "22"
-  NPM_FLAGS = "--legacy-peer-deps"
+  YARN_VERSION = "4.9.4"
+  # Ensure yarn uses node_modules, not PnP
+  YARN_NODE_LINKER = "node-modules"
 
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"

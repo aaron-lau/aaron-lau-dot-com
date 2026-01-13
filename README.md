@@ -1,32 +1,34 @@
-Source code for [www.aaron-lau.com](www.aaron-lau.com). Built using [Gatsby](https://github.com/gatsbyjs/gatsby).
+# aaron-lau.com
 
-## 🚀 Quick start
+My personal website built with Gatsby 5. Has my portfolio, blog posts, and a few other things.
 
-1.  **Start developing.**
+## What's in here
 
-    Check your node version and yarn version are compatible. This repo requires Node 22 LTS or later:
+- Portfolio/landing page with work experience and projects
+- Blog with MDX support (markdown + React components)
+- Dark/light theme toggle
+- Syntax highlighting for code blocks
+- Tag-based post filtering
+- Contact form
 
-    ```shell
-    $ yarn -v
-    4.x.x or later
-    $ node -v
-    v22.x.x or later (Node 22 LTS recommended)
-    ```
+## Local development
 
-    Navigate into the repository and start it up.
+You'll need Node 22 LTS and Yarn 4:
 
-    ```shell
-    $ cd aaron-lau-dot-com/
-    $ yarn install
-    $ yarn start
-    ```
+```bash
+node -v  # should be v22.x.x
+yarn -v  # should be 4.x.x
+```
 
-2.  **Open the source code and start editing!**
+Then just:
 
-    Your site is now running at `http://localhost:8000`!
+```bash
+yarn install
+yarn start
+```
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+Site runs at `http://localhost:8000`. The GraphiQL explorer is at `http://localhost:8000/___graphql` if you need it.
 
-## 💫 Deploy
+## Deployment
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
+Automatically deploys to Netlify on push to master. Build command is `yarn build`.

@@ -1,15 +1,15 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import React from 'react'
+import Helmet from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
 interface SeoProps {
-  description?: string;
-  lang?: string;
-  keywords?: string[];
-  title: string;
-  type?: 'website' | 'article';
-  imagePath?: string;
-  slug?: string;
+  description?: string
+  lang?: string
+  keywords?: string[]
+  title: string
+  type?: 'website' | 'article'
+  imagePath?: string
+  slug?: string
 }
 
 function Seo({
@@ -19,41 +19,39 @@ function Seo({
   title,
   type = 'website',
   imagePath,
-  slug
+  slug,
 }: SeoProps) {
-  const { site, allFile } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            siteUrl
-            description
-            author {
-              name
-            }
-            social {
-              twitter
-            }
+  const { site, allFile } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          siteUrl
+          description
+          author {
+            name
           }
-        }
-        allFile(filter: { name: { eq: "Logo-Square" } }) {
-          edges {
-            node {
-              publicURL
-              name
-            }
+          social {
+            twitter
           }
         }
       }
-    `
-  );
+      allFile(filter: { name: { eq: "Logo-Square" } }) {
+        edges {
+          node {
+            publicURL
+            name
+          }
+        }
+      }
+    }
+  `)
 
-  const siteUrl = site.siteMetadata.siteUrl;
-  const metaDescription = description || site.siteMetadata.description;
-  const metaTwitterAuthor = site.siteMetadata.social.twitter;
-  const metaImagePath = imagePath || allFile.edges[0].node.publicURL;
-  const metaUrl = slug && siteUrl + slug;
+  const siteUrl = site.siteMetadata.siteUrl
+  const metaDescription = description || site.siteMetadata.description
+  const metaTwitterAuthor = site.siteMetadata.social.twitter
+  const metaImagePath = imagePath || allFile.edges[0].node.publicURL
+  const metaUrl = slug && siteUrl + slug
 
   return (
     <Helmet
@@ -86,7 +84,7 @@ function Seo({
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={siteUrl + metaImagePath} />
     </Helmet>
-  );
+  )
 }
 
-export default Seo;
+export default Seo

@@ -1,17 +1,24 @@
 [
   {
+    "company": "Clay",
+    "company_link": "https://clay.com/",
+    "position": "Software Engineer",
+    "timeline": "April 2025 - Present",
+    "description": "Clay helps GTM teams turn any growth idea into reality.."
+  },
+  {
     "company": "Amazon Web Services (AWS)",
     "company_link": "https://aws.amazon.com/",
     "position": "Software Development Engineer",
-    "timeline": "June 2024 - Present",
-    "description": "."
+    "timeline": "June 2024 - April 2025",
+    "description": "AWS Glue and AWS zero-ETL"
   },
   {
     "company": "Datadog",
     "company_link": "https://www.datadoghq.com",
     "position": "Software Engineer",
     "timeline": "July 2019 - May 2024",
-    "description": "Worked on the Data Science Team."
+    "description": "Wroked on the Watchdog anomaly detection system."
   },
   {
     "company": "Datadog",

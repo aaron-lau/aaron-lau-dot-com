@@ -1,37 +1,37 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from 'react'
+import { Link } from 'gatsby'
 
-import './blogList.scss';
+import './blogList.scss'
 
 interface BlogNode {
-  id: string;
+  id: string
   frontmatter: {
-    title: string;
-    date: string;
-    info: string;
-  };
+    title: string
+    date: string
+    info: string
+  }
   fields: {
-    slug: string;
-  };
+    slug: string
+  }
 }
 
 interface BlogEdge {
-  node: BlogNode;
+  node: BlogNode
 }
 
 interface BlogListData {
   allMdx: {
-    edges: BlogEdge[];
-  };
+    edges: BlogEdge[]
+  }
 }
 
 interface BlogListProps {
-  data: BlogListData;
-  templateTitle: string;
+  data: BlogListData
+  templateTitle: string
 }
 
 const BlogList: React.FC<BlogListProps> = ({ data, templateTitle }) => {
-  let blog = data.allMdx.edges;
+  let blog = data.allMdx.edges
   return (
     <div className="blog-list">
       {templateTitle === 'Articles' ? (
@@ -45,9 +45,9 @@ const BlogList: React.FC<BlogListProps> = ({ data, templateTitle }) => {
 
       <main className="main__list">
         {blog.map(({ node }) => {
-          let { id, frontmatter, fields } = node;
-          let { title, date, info } = frontmatter;
-          let { slug } = fields;
+          let { id, frontmatter, fields } = node
+          let { title, date, info } = frontmatter
+          let { slug } = fields
 
           return (
             <Link to={slug} key={id}>
@@ -59,11 +59,11 @@ const BlogList: React.FC<BlogListProps> = ({ data, templateTitle }) => {
                 <p className="blog__list__info">{info}</p>
               </article>
             </Link>
-          );
+          )
         })}
       </main>
     </div>
-  );
-};
+  )
+}
 
-export default BlogList;
+export default BlogList

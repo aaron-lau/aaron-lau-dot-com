@@ -1,10 +1,10 @@
-import React from 'react';
-import Experiences from '../components/portfolio/Experiences';
-import Projects from '../components/portfolio/Projects';
-import Skills from '../components/portfolio/Skills';
-import FeaturedPosts from '../components/portfolio/FeaturedPosts';
+import React from 'react'
+import Experiences from '../components/portfolio/Experiences'
+import Projects from '../components/portfolio/Projects'
+import Skills from '../components/portfolio/Skills'
+import FeaturedPosts from '../components/portfolio/FeaturedPosts'
 
-import './portfolio.scss';
+import './portfolio.scss'
 
 function portfolio() {
   return (
@@ -12,7 +12,10 @@ function portfolio() {
       <section className="hero">
         <h1 className="hero__heading">Hi, I'm Aaron Lau</h1>
         <h2 className="hero__sub-heading">
-          I'm a software development engineer working in New York City at <a className="animated-underline" href="https://aws.amazon.com">AWS</a>
+          I'm a software engineer working in New York City at{' '}
+          <a className="animated-underline" href="https://clay.com">
+            Clay
+          </a>
         </h2>
         <section className="hero__social">
           <a href="https://github.com/aaron-lau">
@@ -36,7 +39,7 @@ function portfolio() {
           <a href="https://bsky.app/profile/aaron-lau.bsky.social">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
               <title>Bluesky</title>
-              <path d="M12.104,7.999C16.919,11.614,22.099,18.944,24,22.877c1.902-3.933,7.081-11.263,11.896-14.878	C39.371,5.391,45,3.373,45,9.795c0,1.283-0.735,10.774-1.167,12.315c-1.499,5.357-6.962,6.724-11.821,5.897	C40.506,29.452,42.667,34.241,38,39.03c-8.863,9.094-12.738-2.282-13.732-5.197c-0.182-0.534-0.267-0.784-0.268-0.572	c-0.001-0.213-0.086,0.037-0.268,0.572C22.738,36.748,18.863,48.124,10,39.03c-4.667-4.789-2.506-9.577,5.988-11.023	c-4.86,0.827-10.323-0.539-11.821-5.897C3.735,20.569,3,11.077,3,9.795C3,3.373,8.63,5.391,12.104,7.999L12.104,7.999z"/>
+              <path d="M12.104,7.999C16.919,11.614,22.099,18.944,24,22.877c1.902-3.933,7.081-11.263,11.896-14.878	C39.371,5.391,45,3.373,45,9.795c0,1.283-0.735,10.774-1.167,12.315c-1.499,5.357-6.962,6.724-11.821,5.897	C40.506,29.452,42.667,34.241,38,39.03c-8.863,9.094-12.738-2.282-13.732-5.197c-0.182-0.534-0.267-0.784-0.268-0.572	c-0.001-0.213-0.086,0.037-0.268,0.572C22.738,36.748,18.863,48.124,10,39.03c-4.667-4.789-2.506-9.577,5.988-11.023	c-4.86,0.827-10.323-0.539-11.821-5.897C3.735,20.569,3,11.077,3,9.795C3,3.373,8.63,5.391,12.104,7.999L12.104,7.999z" />
             </svg>
           </a>
         </section>
@@ -46,7 +49,7 @@ function portfolio() {
       <Skills />
       {<FeaturedPosts />}
     </main>
-  );
+  )
 }
 
-export default portfolio;
+export default portfolio

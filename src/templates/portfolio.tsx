@@ -1,10 +1,10 @@
-import React from 'react'
-import Experiences from '../components/portfolio/Experiences'
-import Projects from '../components/portfolio/Projects'
-import Skills from '../components/portfolio/Skills'
-import FeaturedPosts from '../components/portfolio/FeaturedPosts'
+import React from 'react';
+import Experiences from '../components/portfolio/Experiences';
+import Projects from '../components/portfolio/Projects';
+import Skills from '../components/portfolio/Skills';
+import FeaturedPosts from '../components/portfolio/FeaturedPosts';
 
-import './portfolio.scss'
+import './portfolio.scss';
 
 function portfolio() {
   return (
@@ -12,7 +12,7 @@ function portfolio() {
       <section className="hero">
         <h1 className="hero__heading">Hi, I'm Aaron Lau</h1>
         <h2 className="hero__sub-heading">
-          I’m a software development engineer working in New York City at <a className="animated-underline" href="https://aws.amazon.com">AWS</a>
+          I'm a software development engineer working in New York City at <a className="animated-underline" href="https://aws.amazon.com">AWS</a>
         </h2>
         <section className="hero__social">
           <a href="https://github.com/aaron-lau">
@@ -46,7 +46,7 @@ function portfolio() {
       <Skills />
       {<FeaturedPosts />}
     </main>
-  )
+  );
 }
 
-export default portfolio
+export default portfolio;

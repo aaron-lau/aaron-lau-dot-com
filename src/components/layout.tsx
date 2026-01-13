@@ -1,10 +1,14 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import Header from './Header'
-import ParticleCursor from './ParticleCursor'
-import Footer from './Footer'
+import React, { ReactNode } from 'react';
+import { Helmet } from 'react-helmet';
+import Header from './Header';
+import ParticleCursor from './ParticleCursor';
+import Footer from './Footer';
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   const schemaOrgJSONLD = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -19,7 +23,7 @@ const Layout = ({ children }) => {
       "https://www.linkedin.com/in/aaronlaucs/",
       "https://x.com/aaron_lau"
     ]
-  }
+  };
 
   return (
     <>
@@ -42,7 +46,7 @@ const Layout = ({ children }) => {
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

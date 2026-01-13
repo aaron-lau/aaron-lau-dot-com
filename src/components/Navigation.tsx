@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from 'gatsby'
-import ToggleThemeButton from './toggleViewButton'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'gatsby';
+import ToggleThemeButton from './toggleViewButton';
 
-import './navigation.scss'
+import './navigation.scss';
 
 function Navigation() {
-  const [isSidebarOpen, toggleSidebar] = useState(false)
-  const resume_drive_url = "https://drive.google.com/drive/folders/1T8wl807aKjwm2uu_cuTfbIMnEOEsNawy?usp=sharing"
+  const [isSidebarOpen, toggleSidebar] = useState(false);
+  const resume_drive_url = "https://drive.google.com/drive/folders/1T8wl807aKjwm2uu_cuTfbIMnEOEsNawy?usp=sharing";
 
   useEffect(() => {
-    const navbar = document.getElementById('nav-mobile')
-    const checkbox = document.getElementById('checkbox1')
+    const navbar = document.getElementById('nav-mobile');
+    const checkbox = document.getElementById('checkbox1') as HTMLInputElement;
     if (isSidebarOpen) {
-      navbar.classList.add('tap')
-      document.documentElement.style.overflow = 'hidden'
-      checkbox.checked = true
+      navbar?.classList.add('tap');
+      document.documentElement.style.overflow = 'hidden';
+      if (checkbox) checkbox.checked = true;
     } else {
-      navbar.classList.remove('tap')
-      document.documentElement.style.overflow = 'auto'
-      checkbox.checked = false
+      navbar?.classList.remove('tap');
+      document.documentElement.style.overflow = 'auto';
+      if (checkbox) checkbox.checked = false;
     }
-  }, [isSidebarOpen])
+  }, [isSidebarOpen]);
 
   return (
     <>
@@ -67,7 +67,7 @@ function Navigation() {
         <ToggleThemeButton />
       </nav>
     </>
-  )
+  );
 }
 
-export default Navigation
+export default Navigation;

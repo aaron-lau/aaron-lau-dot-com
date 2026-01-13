@@ -1,28 +1,63 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-import { MDXProvider } from '@mdx-js/react'
+import React, { ReactNode } from 'react';
+import { graphql, Link, PageProps } from 'gatsby';
+import { MDXProvider } from '@mdx-js/react';
 
-import Layout from '../components/layout'
-import Seo from '../components/Seo'
+import Layout from '../components/layout';
+import Seo from '../components/Seo';
 
-import './blogPostTemplate.scss'
+import './blogPostTemplate.scss';
 
-// Define your custom components (if any)
 const components = {
-  h1: props => <h1 {...props} />,
-  h2: props => <h2 {...props} />,
-  p: props => <p {...props} />,
-  // Add other components as needed
+  h1: (props: any) => <h1 {...props} />,
+  h2: (props: any) => <h2 {...props} />,
+  p: (props: any) => <p {...props} />,
+};
+
+interface BlogPostNode {
+  id?: string;
+  fields: {
+    slug: string;
+  };
+  frontmatter: {
+    title: string;
+  };
 }
 
-const BlogPostTemplate = ({ data, pageContext, children }) => {
-  const post = data.mdx
-  const { frontmatter } = post
-  const { slug } = post.fields
-  const { title, date, info, tags, image } = frontmatter
-  const { previous, next } = pageContext
+interface BlogPostPageContext {
+  slug: string;
+  previous: BlogPostNode | null;
+  next: BlogPostNode | null;
+}
 
-  const imageURL = (image && image.publicURL) || ''
+interface BlogPostData {
+  mdx: {
+    fields: {
+      slug: string;
+    };
+    frontmatter: {
+      title: string;
+      date: string;
+      info: string;
+      image?: {
+        publicURL: string;
+      };
+      tags: string[];
+    };
+  };
+}
+
+interface BlogPostTemplateProps extends PageProps<BlogPostData, BlogPostPageContext> {
+  children: ReactNode;
+}
+
+const BlogPostTemplate: React.FC<BlogPostTemplateProps> = ({ data, pageContext, children }) => {
+  const post = data.mdx;
+  const { frontmatter } = post;
+  const { slug } = post.fields;
+  const { title, date, info, tags, image } = frontmatter;
+  const { previous, next } = pageContext;
+
+  const imageURL = (image && image.publicURL) || '';
 
   return (
     <Layout>
@@ -68,10 +103,10 @@ const BlogPostTemplate = ({ data, pageContext, children }) => {
         )}
       </section>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const query = graphql`
   query($slug: String!) {
@@ -90,4 +125,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

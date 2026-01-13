@@ -1,11 +1,32 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import './posts.scss'
+import './posts.scss';
+
+interface PostNode {
+  id: string;
+  fields: {
+    slug: string;
+  };
+  frontmatter: {
+    title: string;
+    info: string;
+  };
+}
+
+interface PostEdge {
+  node: PostNode;
+}
+
+interface FeaturedPostsData {
+  allMdx: {
+    edges: PostEdge[];
+  };
+}
 
 function FeaturedPosts() {
-  const data = useStaticQuery(graphql`
+  const data = useStaticQuery<FeaturedPostsData>(graphql`
     query {
       allMdx(
         filter: {frontmatter: {featured: {eq: true}}}
@@ -25,7 +46,7 @@ function FeaturedPosts() {
         }
       }
     }
-  `)
+  `);
 
   return (
     <section className="blog">
@@ -47,7 +68,7 @@ function FeaturedPosts() {
         <Link className="animated-underline" to="/blog/"> post here</Link>
       </p>
     </section>
-  )
+  );
 }
 
-export default FeaturedPosts
+export default FeaturedPosts;

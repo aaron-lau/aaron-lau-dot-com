@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-import { Helmet } from 'react-helmet'
-import Layout from '../components/layout'
-import Mail from '../images/mail.svg'
+import { Helmet } from 'react-helmet';
+import Layout from '../components/layout';
+import Mail from '../images/mail.svg';
 
-import '../styles/success.scss'
+import '../styles/success.scss';
 
 function Success() {
   return (
@@ -21,7 +21,7 @@ function Success() {
         </h2>
       </div>
     </Layout>
-  )
+  );
 }
 
-export default Success
+export default Success;

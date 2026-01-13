@@ -1,10 +1,20 @@
-import React from 'react'
+import React from 'react';
 
-import Seo from '../components/Seo'
-import Layout from '../components/layout'
-import '../styles/uses.scss'
+import Seo from '../components/Seo';
+import Layout from '../components/layout';
+import '../styles/uses.scss';
 
-const SkillCard = ({ title, skills }) => (
+interface Skill {
+  name: string;
+  description?: string;
+}
+
+interface SkillCardProps {
+  title: string;
+  skills: Skill[];
+}
+
+const SkillCard: React.FC<SkillCardProps> = ({ title, skills }) => (
   <div className="skill-card">
     <h2 className="skill-card__title">{title}</h2>
     <ul className="skill-list">
@@ -16,7 +26,7 @@ const SkillCard = ({ title, skills }) => (
       ))}
     </ul>
   </div>
-)
+);
 
 function SkillsPage() {
   const skillCategories = [
@@ -92,7 +102,7 @@ function SkillsPage() {
         { name: "Git & GitHub", description: "For version control" },
       ]
     },
-  ]
+  ];
 
   return (
     <Layout>
@@ -109,7 +119,7 @@ function SkillsPage() {
         ))}
       </main>
     </Layout>
-  )
+  );
 }
 
-export default SkillsPage
+export default SkillsPage;

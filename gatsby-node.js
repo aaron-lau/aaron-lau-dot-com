@@ -53,7 +53,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     createPage({
       path: node.fields.slug,
-      component: `${path.resolve(`./src/templates/blogPostTemplate.js`)}?__contentFilePath=${node.internal.contentFilePath}`,
+      component: `${path.resolve(`./src/templates/blogPostTemplate.tsx`)}?__contentFilePath=${node.internal.contentFilePath}`,
       context: {
         id: node.id,
         slug: node.fields.slug,
@@ -68,7 +68,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 }
 
 function createTagPages(posts, createPage) {
-  const tagTemplate = path.resolve(`./src/templates/tagsTemplate.js`)
+  const tagTemplate = path.resolve(`./src/templates/tagsTemplate.tsx`)
 
   // Tag pages:
   let tags = []

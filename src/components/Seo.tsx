@@ -1,16 +1,26 @@
-/**
- * Seo component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React from 'react';
+import Helmet from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
+interface SeoProps {
+  description?: string;
+  lang?: string;
+  keywords?: string[];
+  title: string;
+  type?: 'website' | 'article';
+  imagePath?: string;
+  slug?: string;
+}
 
-function Seo({ description, lang, keywords, title, type, imagePath, slug }) {
+function Seo({
+  description,
+  lang = 'en',
+  keywords = ['Web Development', 'Data Engineer', 'Software Developer', 'javascript', 'CSS', 'blog'],
+  title,
+  type = 'website',
+  imagePath,
+  slug
+}: SeoProps) {
   const { site, allFile } = useStaticQuery(
     graphql`
       query {
@@ -37,13 +47,13 @@ function Seo({ description, lang, keywords, title, type, imagePath, slug }) {
         }
       }
     `
-  )
+  );
 
-  const siteUrl = site.siteMetadata.siteUrl
-  const metaDescription = description || site.siteMetadata.description
-  const metaTwitterAuthor = site.siteMetadata.social.twitter
-  const metaImagePath = imagePath || allFile.edges[0].node.publicURL
-  const metaUrl = slug && siteUrl + slug
+  const siteUrl = site.siteMetadata.siteUrl;
+  const metaDescription = description || site.siteMetadata.description;
+  const metaTwitterAuthor = site.siteMetadata.social.twitter;
+  const metaImagePath = imagePath || allFile.edges[0].node.publicURL;
+  const metaUrl = slug && siteUrl + slug;
 
   return (
     <Helmet
@@ -76,21 +86,7 @@ function Seo({ description, lang, keywords, title, type, imagePath, slug }) {
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={siteUrl + metaImagePath} />
     </Helmet>
-  )
+  );
 }
 
-Seo.defaultProps = {
-  lang: `en`,
-  type: 'website',
-  keywords: ['Web Development', 'Data Engineer', 'Software Developer', 'javascript', 'CSS', 'blog'],
-}
-
-Seo.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(['website', 'article']),
-}
-
-export default Seo
+export default Seo;

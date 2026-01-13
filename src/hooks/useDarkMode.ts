@@ -1,11 +1,16 @@
-// src/hooks/useDarkMode.js
 import { useState, useEffect } from 'react';
 
-const useDarkMode = (initialValue = false) => {
-  // Initialize state with localStorage value if available, otherwise use initialValue
-  const [value, setValue] = useState(() => {
+interface UseDarkModeReturn {
+  value: boolean;
+  enable: () => void;
+  disable: () => void;
+  toggle: () => void;
+}
+
+const useDarkMode = (initialValue: boolean = false): UseDarkModeReturn => {
+  const [value, setValue] = useState<boolean>(() => {
     if (typeof window === 'undefined') return initialValue;
-    
+
     try {
       const item = window.localStorage.getItem('darkMode');
       return item ? JSON.parse(item) : initialValue;
@@ -15,15 +20,12 @@ const useDarkMode = (initialValue = false) => {
     }
   });
 
-  // Update localStorage and apply classes/styles when value changes
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
     try {
-      // Update localStorage
       window.localStorage.setItem('darkMode', JSON.stringify(value));
 
-      // Update body class
       if (value) {
         document.body.classList.add('dark-mode');
       } else {
@@ -34,13 +36,8 @@ const useDarkMode = (initialValue = false) => {
     }
   }, [value]);
 
-  // Toggle function
   const toggle = () => setValue(prevValue => !prevValue);
-
-  // Enable function
   const enable = () => setValue(true);
-
-  // Disable function
   const disable = () => setValue(false);
 
   return {

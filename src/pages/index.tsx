@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-import Seo from '../components/Seo'
-import Layout from '../components/layout'
-import Portfolio from '../templates/portfolio'
+import Seo from '../components/Seo';
+import Layout from '../components/layout';
+import Portfolio from '../templates/portfolio';
 
 function index() {
   return (
@@ -13,7 +13,7 @@ function index() {
       />
       <Portfolio />
     </Layout>
-  )
+  );
 }
 
-export default index
+export default index;

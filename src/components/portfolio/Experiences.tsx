@@ -1,10 +1,28 @@
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import './projects.scss'
+import './projects.scss';
+
+interface ExperienceNode {
+  company: string;
+  company_link?: string;
+  position: string;
+  timeline: string;
+  description?: string;
+}
+
+interface ExperienceEdge {
+  node: ExperienceNode;
+}
+
+interface ExperiencesData {
+  allExperiencesJson: {
+    edges: ExperienceEdge[];
+  };
+}
 
 function Experiences() {
-  const data = useStaticQuery(graphql`
+  const data = useStaticQuery<ExperiencesData>(graphql`
     query {
       allExperiencesJson {
         edges {
@@ -18,7 +36,7 @@ function Experiences() {
         }
       }
     }
-  `)
+  `);
 
   return (
     <section className="portfolio__section projects">
@@ -37,17 +55,12 @@ function Experiences() {
           <h4 className="project-stack">
             <strong>{experience.node.position}</strong> - ({experience.node.timeline})
           </h4>
-          {/*
-            {experience.node.description && (
-              <p className="project-description" dangerouslySetInnerHTML={{ __html: experience.node.description }} />
-            )}
-          */}
           <div>
           </div>
         </div>
       ))}
     </section>
-  )
+  );
 }
 
-export default Experiences
+export default Experiences;

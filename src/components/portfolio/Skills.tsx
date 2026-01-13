@@ -1,19 +1,17 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
 
+import aws from '../../images/tech/aws.svg';
+import azure from '../../images/tech/azure.svg';
+import gcp from '../../images/tech/gcp.svg';
+import java from '../../images/tech/java.svg';
+import kubernetes from '../../images/tech/kubernetes.svg';
+import python from '../../images/tech/python.svg';
+import snowflake from '../../images/tech/snowflake.svg';
+import spark from '../../images/tech/spark.svg';
+import terraform from '../../images/tech/terraform.svg';
 
-import aws from '../../images/tech/aws.svg'
-import azure from '../../images/tech/azure.svg'
-import gcp from '../../images/tech/gcp.svg'
-import java from '../../images/tech/java.svg'
-import kubernetes from '../../images/tech/kubernetes.svg'
-import python from '../../images/tech/python.svg'
-import snowflake from '../../images/tech/snowflake.svg'
-import spark from '../../images/tech/spark.svg'
-import terraform from '../../images/tech/terraform.svg'
-
-
-import './skills.scss'
+import './skills.scss';
 
 function Skills() {
   return (
@@ -37,7 +35,7 @@ function Skills() {
       </div>
       <h3 className="portfolio__sub-header "><Link className="animated-underline" to="/uses/">Find more details here</Link></h3>
     </section>
-  )
+  );
 }
 
-export default Skills
+export default Skills;

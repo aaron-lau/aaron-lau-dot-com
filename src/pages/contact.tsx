@@ -1,13 +1,11 @@
-import React from 'react'
-import Layout from '../components/layout'
+import React from 'react';
+import Layout from '../components/layout';
 
+import Seo from '../components/Seo';
 
-import Seo from '../components/Seo'
+import '../styles/contact.scss';
 
-import '../styles/contact.scss'
-
-
-const Contact = () => (
+const Contact: React.FC = () => (
   <Layout>
     <Seo
       title="Contact Aaron Lau"
@@ -15,7 +13,7 @@ const Contact = () => (
     />
 
     <main className="contact">
-      <h1>Hello, it’s nice to meet you.</h1>
+      <h1>Hello, it's nice to meet you.</h1>
       <p>
         Whether you'd like to work together, or just want to say hi, I'd love to hear from you
       </p>
@@ -23,7 +21,7 @@ const Contact = () => (
       <ContactForm />
     </main>
   </Layout>
-)
+);
 
 function ContactForm() {
   return (
@@ -37,7 +35,7 @@ function ContactForm() {
     >
       <p className="hidden">
         <label>
-          Don’t fill this out if you're human: <input name="bot-field" />
+          Don't fill this out if you're human: <input name="bot-field" />
         </label>
       </p>
       <input type="hidden" name="form-name" value="contact" />
@@ -58,12 +56,12 @@ function ContactForm() {
 
       <label>
         <span className="contact-form__label">Message</span>
-        <textarea row="20" cols="50" placeholder="Your message" name="message" required />
+        <textarea rows={20} cols={50} placeholder="Your message" name="message" required />
       </label>
 
       <button className="btn btn--hover">SUBMIT</button>
     </form>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

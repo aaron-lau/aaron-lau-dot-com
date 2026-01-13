@@ -148,10 +148,6 @@ body.dark-mode {
     color: $grey-400;
   }
 
-  .hero {
-    background: linear-gradient(135deg, rgba($grey-800, 0.5), rgba($grey-900, 0.5));
-  }
-
   .hero__heading {
     background: linear-gradient(45deg, $primary-lighter, $primary-light);
     -webkit-background-clip: text;

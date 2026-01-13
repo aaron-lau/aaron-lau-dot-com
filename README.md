@@ -4,20 +4,20 @@ Source code for [www.aaron-lau.com](www.aaron-lau.com). Built using [Gatsby](htt
 
 1.  **Start developing.**
 
-    Check your node version and npm version are compatible. At the time of writing this repo is built using:
+    Check your node version and npm version are compatible. This repo requires Node 22 LTS or later:
 
     ```shell
-    $ npm -v 
-    9.8.1
-    $ node -v 
-    v18.16.0
+    $ npm -v
+    10.x.x or later
+    $ node -v
+    v22.x.x or later (Node 22 LTS recommended)
     ```
 
     Navigate into the repository and start it up.
 
     ```shell
     $ cd aaron-lau-dot-com/
-    $ CXXFLAGS="--std=c++14" npm install
+    $ npm install
     $ npm start
     ```
 

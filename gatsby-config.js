@@ -54,13 +54,21 @@ module.exports = {
         include_favicon: true,
       },
     },
-    // google Analytics
+    // Google Analytics 4
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: 'UA-133322442-4',
-        // Puts tracking script in the head instead of the body
-        head: true,
+        trackingIds: [
+          'G-XXXXXXXXXX',
+        ],
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: true,
+          respectDNT: true,
+        },
       },
     },
     // transforming mdx to html

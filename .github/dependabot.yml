@@ -1,0 +1,52 @@
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    # Allow both direct and indirect updates for all dependencies
+    open-pull-requests-limit: 10
+    # Group minor and patch updates together
+    groups:
+      gatsby-packages:
+        patterns:
+          - "gatsby*"
+        update-types:
+          - "minor"
+          - "patch"
+      development-dependencies:
+        dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"
+    # Assignees and reviewers (optional - update with your GitHub username)
+    # assignees:
+    #   - "aaron-lau"
+    # reviewers:
+    #   - "aaron-lau"
+    # Customize commit message
+    commit-message:
+      prefix: "chore"
+      prefix-development: "chore"
+      include: "scope"
+    # Add labels to PRs
+    labels:
+      - "dependencies"
+      - "automated"
+
+  # Enable security updates for GitHub Actions (if you add workflows in the future)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "ci"
+    labels:
+      - "dependencies"
+      - "github-actions"

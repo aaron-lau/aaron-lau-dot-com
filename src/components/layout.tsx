@@ -16,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     email: 'aaron-lau@aaron-lau.com',
     image: 'https://drive.google.com/',
     url: 'http://aaron-lau.com',
-    jobTitle: 'Sofrware Engineer',
+    jobTitle: 'Software Engineer',
     gender: 'http://schema.org/Male',
     sameAs: ['https://github.com/aaron-lau', 'https://www.linkedin.com/in/aaronlaucs/', 'https://x.com/aaron_lau'],
   }
